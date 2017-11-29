@@ -3,13 +3,13 @@
 ## SETUP
 
 1. Create New Folder on Desktop (or wherever you want to store ALL your SMC files), called SMCoordination .../Desktop/SMCoordination/
-2. Download from goo.gl/g2Ndzx, and *PUT IT IN SMCoordination FOLDER*
-- SMCoordinatorV1.py .../Desktop/SMCoordination/SMCoordinatorV1.py
+2. Download from goo.gl/PiFwBN, and *PUT IT IN SMCoordination FOLDER*
+- SMCoordinatorV1.py .../Desktop/SMCoordination/SMCoordinator.py
 - python-3.6.3-...(.pkg MacOSX)/(.exe Windows)
 
 ## Coordination
 *Do this for every move*
-1. From goo.gl/g2Ndzx, open SMCoordinatorV1.gsheet
+1. From goo.gl/PiFwBN, open SMCoordinator.gsheet
 2. File > Download as > Microsoft Excel (.xlsx)
 3. Save file as {MOVE#}.xlsx to SMCoordination folder (e.g. the file for move 100 should be 100.xlsx)
 4. Open {MOVE#}.xlsx and edit MC tab according to MC planning snd move requirements
