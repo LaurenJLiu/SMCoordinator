@@ -18,7 +18,7 @@
 4. Open ```{MOVE#}.xlsx``` and edit MC tab according to MC planning snd move requirements
 5. **File > Save As >** ```{MOVE#}.csv``` (Windows Comma Separated (.csv))
 6. It will prompt you saying you cannot save multiple sheets. Click Save Active Sheet then Continue
-7. Open ```SMCoordinatorV1.py``` file in IDLE
+7. Open ```SMCoordinator.py``` file in IDLE
 8. **Run > Run Module**
 9. Enter Move# when prompted (same as what you named the file in step 5.)
 10. No errors should appear. If an error appears, it is most likely a decoding error of special symbols. Try opening the .csv file, erase contents of cells ```K13:K14``` and ```L13:L14``` (you will have to manually input these back into the itinerary). Save the .csv file again (Click OK and Continue to any dialogue boxes that appear)

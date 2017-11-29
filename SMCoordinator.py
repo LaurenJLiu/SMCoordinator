@@ -24,8 +24,8 @@ driver3 = row[14]
 drivers = [[driver1, 'Driver #1'], [driver2, 'Driver #2'], [driver3, 'Driver #3']]
 
 if driver1[2] == leadMover[2]:
-    drivers[0] = [driver1, 'Lead Mover & Driver #1']
-    leadMover[2] = ""
+    leadMovers[0] = [leadMover, 'Lead Mover & Driver #1']
+    driver1[2] = ""
 
 mover1 = row[17]
 mover2 = row[18]
@@ -33,6 +33,11 @@ mover3 = row[19]
 mover4 = row[20]
 mover5 = row[21]
 movers = [[mover1, 'Mover'], [mover2, 'Mover'], [mover3, 'Mover'], [mover4, 'Mover'], [mover5, 'Mover']]
+
+if mover1[2] == leadMover[2]:
+    leadMovers[0] = [leadMover, 'Lead Mover & Mover #1']
+    mover1[2] = ""
+
 
 tempTeam = [leadMovers, drivers, movers]
 moveTeam = []
@@ -74,7 +79,7 @@ with open(moveItinerary, 'w') as f:
     #--------------------------------------
     f.write('<font size="3" style="color:black">')
     f.write('<p>Hi All,')
-    f.write('<p>Thank you for agreeing to take on <b><font size="4">Move #' + moveNum + ' on ' + moveDate + ' @ ' + moveTime + '</font></b>' )
+    f.write('<p>Thank you for agreeing to take on <b><font size="4" style="color:purple">Move #' + moveNum + ' on ' + moveDate + ' @ ' + moveTime + '</font></b>' )
     f.write('<p>Below is essential information about the move, and the presumed itinerary. Please make sure you have this email available on your phone as a reference. I will also be available as a support for you during the time of this move, @ <b><font style="color:blue">' + mcPhone +'</font></b>')
     f.write('<br>I hope you do not mind, I have put your phone numbers below for communication purposes during the move.')
     f.write('<p><p>Let me know if you have any questions or concerns, I am happy to clarify!')
@@ -117,7 +122,7 @@ with open(moveItinerary, 'w') as f:
         if location[3] != "":
             locationType = location[2]
             locationAddress = location[3]
-            f.write('<i><font style="color:orange">' + locationType + ':</font></i>       ' + locationAddress + '<br>')
+            f.write('<i><font style="color:orange"><b>' + locationType + ':</b></font></i>       ' + locationAddress + '<br>')
 
     f.write('<p>')
 
@@ -125,7 +130,7 @@ with open(moveItinerary, 'w') as f:
         driverName = driver[0][2]
         route = driver[0][8]
 
-        if driverName != "":
+        if driverName != "" and route != "":
             f.write('<b><font style="color:green">' + driverName + '</font></b>     <a href="' + route + '">GMaps Full Route</a><br>')
 
     #--------------------------------------
