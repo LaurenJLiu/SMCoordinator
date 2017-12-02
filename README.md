@@ -7,20 +7,22 @@
 1. Create New Folder on ```Desktop``` (or wherever you want to store ALL your SMC files), called ```SMCoordination```
 2. Download the following files from ```goo.gl/2L1yDP```, and **PUT IT IN SMCoordination FOLDER**
 - **TheSMCoordinator > SMCoordinator >** ```SMCoordinator.py```
+  - If I ask you to download an updated program/Python file, this is the file I'm talking about.
 - ```python-3.6.3-macosx10.6.pkg``` for MacOSX
 - ```python-3.6.3-amd64.exe``` for Windows
 
 
 ## COORDINATION
 *Do this for every new move*
+
 ***Follow the specified naming directions - or the program won't work***
 1. From ```goo.gl/2L1yDP```, open ```SMCoordinator.gsheet```
 2. Duplicate the ***MC*** tab, and rename the tab to **{MOVE#}** (e.g. the tab for move 100 should be called **100**)
-Optional: colour the tab to your corresponding Ongoing Moves colour
+- Optional: colour the tab to your corresponding Ongoing Moves colour
 3. Edit the coloured fields according to MC planning and move requirements
 
-*Proceed to the next steps only when all planning steps are done, spreadsheet is complete, and you are ready to send out the itinerary.
-In other words, any changes you make to your itinerary after this point, will not be reflected in the final output, unless you redo them. So if you need to make changes, start at step 3, and then repeat steps 4-10, replacing/overwriting the old files when prompted.*
+***Proceed to the next steps only when all planning steps are done, spreadsheet is complete, and you are ready to send out the itinerary.
+In other words, any changes you make to your itinerary after this point, will not be reflected in the final output, unless you redo them. So if you need to make changes, start at step 3, and then repeat steps 4-10, replacing/overwriting the old files when prompted.***
 
 4. **File > Download as > Comma-separated values (.csv, current sheet)**
 **important: make sure this is saved to the same folder that contains** ``` SMCoordinator.py```
