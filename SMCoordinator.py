@@ -65,7 +65,7 @@ note8 = row[60]
 notes = [note1, note2, note3, note4, note5, note6, note7, note8]
 
 #------------------------------------------
-moveItinerary = moveNum + 'MoveItinerary.html'
+moveItinerary = 'SMCoordinator - ' + moveNum + ' MoveItinerary.html'
 
 with open(moveItinerary, 'w') as f:
     f.write('<html>\n')
@@ -87,7 +87,6 @@ with open(moveItinerary, 'w') as f:
         driver1[2] = "_lead_"
 
     if mover1[2] == leadMover[2]:
-        leadMovers[0] = [leadMover, 'Lead Mover & Mover #1']
         mover1[2] = "_lead_"
 
     tempTeam = [leadMovers, drivers, movers]
@@ -143,9 +142,11 @@ with open(moveItinerary, 'w') as f:
 
     for driver in drivers:
         driverName = driver[0][2]
+        driverPosition = driver[1]
         route = driver[0][8]
 
         if driverName != "" and route != "":
+            f.write(driverPosition + ':    ' )
             f.write('<b><font style="color:green">' + driverName + '</font></b>     <a href="' + route + '">GMaps Full Route</a><br>')
 
     #--------------------------------------
