@@ -25,8 +25,9 @@
 In other words, any changes you make to your itinerary after this point, will not be reflected in the final output, unless you redo them. So if you need to make changes, start at step 3, and then repeat steps 4-10, replacing/overwriting the old files when prompted.***
 
 4. **File > Download as > Comma-separated values (.csv, current sheet)**
-**important: make sure this is saved to the same folder that contains** ``` SMCoordinator.py```
-- If when you click on it, it downloads right away to an unknown location, it is probably saved in your Downloads folder, and you will have to move it to the SMCoordination folder manually. If you want to be able to save it directly to SMCoordination, message me and I'll show you how to change that setting
+
+**IMPORTANT: Make sure this is saved to the same folder that contains** ``` SMCoordinator.py``` **. Do NOT change the name of the file. Keep the default file name**
+- If when you click on it, it downloads right away to an unknown location, it is probably saved in your Downloads folder, and you will have to move it to the SMCoordination folder manually. If you want to be able to save it directly to SMCoordination, message me and I'll show you how to change that setting.
 5. Open ```SMCoordinator.py``` file in IDLE
 6. **Run > Run Module**
 7. Enter Move# when prompted (same as what you named the file in step 5.)
