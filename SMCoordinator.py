@@ -1,6 +1,6 @@
 import csv
 
-fileName = input("Move Number: ") + '.csv'
+fileName = 'SMCoordinator - ' + input("Move Number: ") + '.csv'
 
 with open(fileName, 'rt', encoding='CP1252') as csvfile:
     reader = csv.reader(csvfile)
@@ -9,7 +9,7 @@ with open(fileName, 'rt', encoding='CP1252') as csvfile:
 #------------------------------------------
 
 moveNum = row[4][2]
-moveDate = row[5][2]
+moveDate = row[5][3]
 moveTime = row[6][2]
 mcName = row[1][2]
 mcPhone = row[2][2]
@@ -23,27 +23,12 @@ driver2 = row[13]
 driver3 = row[14]
 drivers = [[driver1, 'Driver #1'], [driver2, 'Driver #2'], [driver3, 'Driver #3']]
 
-if driver1[2] == leadMover[2]:
-    leadMovers[0] = [leadMover, 'Lead Mover & Driver #1']
-    driver1[2] = ""
-
 mover1 = row[17]
 mover2 = row[18]
 mover3 = row[19]
 mover4 = row[20]
 mover5 = row[21]
 movers = [[mover1, 'Mover'], [mover2, 'Mover'], [mover3, 'Mover'], [mover4, 'Mover'], [mover5, 'Mover']]
-
-if mover1[2] == leadMover[2]:
-    leadMovers[0] = [leadMover, 'Lead Mover & Mover #1']
-    mover1[2] = ""
-
-
-tempTeam = [leadMovers, drivers, movers]
-moveTeam = []
-for x in tempTeam:
-    for y in x:
-        moveTeam.append(y)
 
 location1 = row[24]
 location2 = row[25]
@@ -69,8 +54,18 @@ itinerary9 = row[45]
 itinerary10 = row[46]
 itineraries = [itinerary1, itinerary2, itinerary3, itinerary4, itinerary5, itinerary6, itinerary7, itinerary8, itinerary9, itinerary10]
 
+note1 = row[53]
+note2 = row[54]
+note3 = row[55]
+note4 = row[56]
+note5 = row[57]
+note6 = row[58]
+note7 = row[59]
+note8 = row[60]
+notes = [note1, note2, note3, note4, note5, note6, note7, note8]
+
 #------------------------------------------
-moveItinerary = 'Itinerary' + moveNum + '.html'
+moveItinerary = moveNum + 'MoveItinerary.html'
 
 with open(moveItinerary, 'w') as f:
     f.write('<html>\n')
@@ -87,13 +82,33 @@ with open(moveItinerary, 'w') as f:
     #--------------------------------------
     f.write('<p><b><u>Move Team:</u></b><p>')
 
+    if driver1[2] == leadMover[2]:
+        leadMovers[0] = [leadMover, 'Lead Mover & Driver #1']
+        driver1[2] = "_lead_"
+
+    if mover1[2] == leadMover[2]:
+        leadMovers[0] = [leadMover, 'Lead Mover & Mover #1']
+        mover1[2] = "_lead_"
+
+    tempTeam = [leadMovers, drivers, movers]
+    moveTeam = []
+    for x in tempTeam:
+        for y in x:
+            moveTeam.append(y)
+
     for person in moveTeam:
         personName = person[0][2]
         personPosition = person[1]
         personPhone = person[0][3]
 
-        if personName != "":
+        if personName != "" and personName != "_lead_":
             f.write('<b><font style="color:green">' + personName + '</font></b> (' + personPosition + ') <b>' + personPhone + '</b><br>')
+
+    if driver1[2] == "_lead_":
+        driver1[2] = leadMover[2]
+
+    if mover1[2] == "_lead_":
+        mover1[2] = leadMover[2]
 
     #--------------------------------------
     f.write('<p><b><u>Vehicle Information:</u></b><p>')
@@ -174,7 +189,13 @@ with open(moveItinerary, 'w') as f:
 
     #--------------------------------------
     f.write('<p><b><u>Notes About This Move:</u></b><ul>')
-    f.write('<li><u>Items to be moved:</u> ' + items + '</ul>')
+    f.write('<li><u>Items to be moved:</u> ' + items)
+
+    for note in notes:
+        if note[1] != "":
+            f.write('<li>' + note[1])
+
+    f.write('</ul>')
 
     #--------------------------------------
     f.write('<p><b><u>Security Reminders:</u></b><ul>')
