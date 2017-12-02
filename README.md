@@ -26,11 +26,13 @@ In other words, any changes you make to your itinerary after this point, will no
 
 4. **File > Download as > Comma-separated values (.csv, current sheet)**
 
-**IMPORTANT: Make sure this is saved to the same folder that contains** ``` SMCoordinator.py``` **. Do NOT change the name of the file. Keep the default file name**
+**IMPORTANT: Make sure this is saved to the same folder that contains** ``` SMCoordinator.py```
+
+**Do NOT change the name of the file. Keep the default file name.**
 - If when you click on it, it downloads right away to an unknown location, it is probably saved in your Downloads folder, and you will have to move it to the SMCoordination folder manually. If you want to be able to save it directly to SMCoordination, message me and I'll show you how to change that setting.
 5. Open ```SMCoordinator.py``` file in IDLE
 6. **Run > Run Module**
-7. Enter Move# when prompted (same as what you named the file in step 5.)
+7. Enter Move# when prompted (same as what you named the tab in step 2.)
 8. After program has successfully run, you will be able to find an ```{MOVE#}MoveItinerary.html``` file in the SMCoordination folder. Open this file (it will open in one of your web browsers)
 9. Copy and Paste the contents of the .html file into your Move Itinerary email
 10. Hide the **{MOVE#}** tab in the GSheet when your move is complete
