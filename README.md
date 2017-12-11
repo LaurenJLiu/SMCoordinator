@@ -30,8 +30,8 @@ In other words, any changes you make to your itinerary after this point, will no
 
 **Do NOT change the name of the file. Keep the default file name.**
 - If when you click on it, it downloads right away to an unknown location, it is probably saved in your Downloads folder, and you will have to move it to the SMCoordination folder manually. If you want to be able to save it directly to SMCoordination, message me and I'll show you how to change that setting.
-- Google Chrome: Settings > Advanced > Downloads > Location > Ask where to save each file before downloading
-- Safari: Safari > Preferences > File download location: > Ask for each download
+  - Google Chrome: Settings > Advanced > Downloads > Location > Ask where to save each file before downloading
+  - Safari: Safari > Preferences > File download location: > Ask for each download
 5. Open ```SMCoordinator.py``` file in IDLE
 6. **Run > Run Module**
 7. Enter Move# when prompted (same as what you named the tab in step 2.)
