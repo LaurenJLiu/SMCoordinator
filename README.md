@@ -7,7 +7,7 @@
 1. Create New Folder on ```Desktop``` (or wherever you want to store ALL your SMC files), called ```SMCoordination```
 2. Download the following files from ```goo.gl/2L1yDP```, and **PUT IT IN SMCoordination FOLDER**
 - **TheSMCoordinator > SMCoordinator >** ```SMCoordinator.py```
-  - If I ask you to download an updated program/Python file, this is the file I'm talking about.
+  - If I ask you in the future to download an updated program/Python file, this is the file I'm talking about.
 - ```python-3.6.3-macosx10.6.pkg``` for MacOSX
 - ```python-3.6.3-amd64.exe``` for Windows
 
