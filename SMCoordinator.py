@@ -189,10 +189,12 @@ with open(moveItinerary, 'w') as f:
             loadTime = arrivalTime + ' - ' + departureTime
             driveTime = itinerary[4]
 
-            f.write('<p><mark><u>' + roadTime + ':</u></mark>       ')
-            f.write(itinerary[10] + ' (Approx. ' + driveTime + ' min. drive)')
-
-            f.write('<p><mark><u>' + loadTime + ':</u></mark>       ' + itinerary[8])
+            if itinerary[10] != "":
+                f.write('<p><mark><u>' + roadTime + ':</u></mark>       ')
+                f.write(itinerary[10] + ' (Approx. ' + driveTime + ' min. drive)')
+                
+            if itinerary[8] != "":
+                f.write('<p><mark><u>' + loadTime + ':</u></mark>       ' + itinerary[8])
 
     f.write('<p><mark><u>' + endTime + ':</u></mark>        ')
     f.write('When complete, ')
