@@ -168,15 +168,31 @@ with open(moveItinerary, 'w') as f:
                 if driverName == moversDriver:
                     f.write('<br><b><font style="color:green">' + moverName + '</font></b>, if you could meet <b><font style="color:green">' + driverName + ' </font></b>at this Enterprise Vehicle <b>(' + vehicleDescription + ') at ' + pickupTime + '</b>, that would be great! Exact details can be found under "Vehicle Information". If you are unable to get to this location, please "Reply All" to this email so we all know, and we will see if there is another option.')
 
+    # for itinerary in itineraries:
+    #     if itinerary[1] != "":
+    #         startTime = itinerary[1]
+    #         endTime = itinerary[2]
+    #         time = startTime + '-' + endTime
+    #         driveTime = itinerary[4]
+    #
+    #         f.write('<p><mark><u>' + time + ':</u></mark>        ')
+    #         f.write(itinerary[8] + ' (Approx. ' + driveTime + ' min. drive).')
+
     for itinerary in itineraries:
         if itinerary[1] != "":
             startTime = itinerary[1]
+            arrivalTime = itinerary[5]
+            departureTime = itinerary[7]
             endTime = itinerary[2]
-            time = startTime + '-' + endTime
+
+            roadTime = startTime + ' - ' + arrivalTime
+            loadTime = arrivalTime + ' - ' + departureTime
             driveTime = itinerary[4]
 
-            f.write('<p><mark><u>' + time + ':</u></mark>        ')
-            f.write(itinerary[8] + ' (Approx. ' + driveTime + ' min. drive).')
+            f.write('<p><mark><u>' + roadTime + ':</u></mark>       ')
+            f.write(itinerary[10] + ' (Approx. ' + driveTime + ' min. drive)')
+
+            f.write('<p><mark><u>' + loadTime + ':</u></mark>       ' + itinerary[8])
 
     f.write('<p><mark><u>' + endTime + ':</u></mark>        ')
     f.write('When complete, ')
